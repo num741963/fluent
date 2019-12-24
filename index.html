@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fluent_css v5</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .all {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(51, 51, 51);
+
+        }
+
+        .container_all {
+            width: 100%;
+            height: 80%;
+        }
+
+        .navbar {
+            height: 48px;
+            display: flex;
+        }
+
+        .logoicon {
+            width: 20%;
+            display: flex;
+            margin-left: 20px;
+        }
+
+        .logoicon p {
+            color: #fff;
+            line-height: 49px;
+            padding-left: 20px;
+        }
+
+        .navrightmenu {
+            width: 50%;
+            color: #fff;
+            line-height: 49px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        @media (max-width:576px) {
+            .navrightmenu {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
+        .main_all {
+            width: 100%;
+            display: flex;
+        }
+
+        .left_main_title {
+            width: 40%;
+            position: relative;
+            left: 50px;
+        }
+
+        .left_main_title h1 {
+            color: rgb(79, 229, 255);
+            font-size: 4em;
+            position: relative;
+            top: 50px;
+        }
+
+        .left_main_title p {
+            width: 70%;
+            color: #fff;
+            position: relative;
+            top: 100px;
+        }
+
+        .right_main_img {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #right_img_left {
+            padding-top: 40%;
+            padding-right: 10%;
+        }
+
+        #right_img_middle {
+            padding-top: 50px;
+        }
+
+        #right_img_right {
+            padding-left: 10%;
+            padding-bottom: 50%;
+        }
+
+        .row {
+            margin: 0;
+        }
+
+        .col {
+            padding: 0;
+        }
+
+        .form_menuboxs {
+            width: 100%;
+        }
+
+        .form_menuboxs::before {
+            width: auto;
+            background-color: rgb(34, 128, 200);
+            position: absolute;
+            top: 800px;
+        }
+
+        .form_group {
+            height: 400px;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+        .form_topicon {
+            padding-bottom: 50px;
+        }
+
+        .form_title {
+            padding-right: 20px;
+        }
+
+        #left_form {
+            background-color: rgb(37, 142, 222);
+        }
+
+        #left_form:hover {
+            background-color: rgb(12, 117, 197);
+        }
+
+        #second_form {
+            background-color: rgb(79, 229, 255);
+        }
+
+        #second_form:hover {
+            background-color: rgb(54, 204, 230);
+        }
+
+        #third_form {
+            background-color: rgb(207, 143, 255);
+        }
+
+        #third_form:hover {
+            background-color: rgb(182, 118, 230);
+        }
+
+        #right_form {
+            background-color: rgb(105, 229, 110);
+        }
+
+        #right_form:hover {
+            background-color: rgb(80, 204, 85);
+        }
+
+        .des_background_img {
+            width: 100%;
+            height: 100%;
+            background-attachment: fixed;
+            background-image: url('https://www.microsoft.com/design/fluent/assets/images/msft-verge-fluent.jpg');
+            background-size: cover;
+
+        }
+
+        .des_title {
+            width: 50%;
+        }
+
+        .des_title h1 {
+            font-size: 5em;
+            position: relative;
+            top: 400px;
+            left: 100px;
+        }
+
+        .des_title p {
+            position: relative;
+            top: 450px;
+            left: 100px;
+        }
+
+        .style_background {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(25, 25, 25);
+
+        }
+
+        .style_middle_ball {
+            width: 500px;
+            height: 500px;
+            background-image: url('https://www.microsoft.com/design/fluent/assets/images/sphere@1x.png');
+            background-size: cover;
+            position: relative;
+            left: 200px;
+
+        }
+
+        .style_right_box {
+            width: 100px;
+            background-image: url('https://www.microsoft.com/design/fluent/assets/images/rect-white-01.svg');
+            background-size: cover;
+            position: absolute;
+            top: 1050px;
+            left: 650px;
+        }
+
+        .style_right_text {
+            padding-left: 60%;
+        }
+
+        .style_right_text p {
+            width: 350px;
+            height: 300px;
+            color: #fff;
+            margin: 0;
+        }
+
+        .style_bottom_ball {
+            width: 100%;
+            height: 300px;
+            background-image: url('https://www.microsoft.com/design/fluent/assets/images/terraforma@1x.png');
+            background-size: cover;
+        }
+
+        .style_bottom_ball h2 {
+            width: 500px;
+            color: #000;
+            font-size: 50px;
+            padding-top: 110px;
+            padding-left: 300px;
+
+        }
+
+        .des_background_pink {
+            width: 100%;
+            height: 700px;
+            background-image: url('https://www.microsoft.com/design/fluent/assets/images/clouds.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        .des_rightpink_img {
+            width: 200px;
+            background-image: url('https://www.microsoft.com/design/fluent/assets/images/plane-solid.svg');
+            background-size: cover;
+            position: absolute;
+            bottom: -5000px;
+            left: 600px;
+        }
+
+        .des_pink_left_title {
+            font-size: 8em;
+            position: relative;
+            top: 200px;
+            left: 100px;
+        }
+
+        .des_pink_right_title {
+            font-size: 8em;
+            position: relative;
+            left: 700px;
+            top: 50px;
+        }
+
+        .des_background_gray {
+            width: 100%;
+            height: 500px;
+            background-color: rgb(204, 204, 204);
+        }
+
+        .des_background_gray h2 {
+            width: 700px;
+            font-size: 5em;
+            position: relative;
+            left: 100px;
+        }
+
+        .des_background_gray p {
+            width: 400px;
+            position: relative;
+            left: 100px;
+            top: 50px;
+        }
+
+        .des_gray_rightimg {
+            background-image: url('https://www.microsoft.com/design/fluent/assets/images/icon-arrangement@1x.png');
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 650px;
+            bottom: -3050px;
+        }
+
+        .des_background_sky {
+            background-image: url('https://www.microsoft.com/design/fluent/assets/images/space.jpg');
+            width: 100%;
+            height: 700px;
+            background-attachment: fixed;
+        }
+
+        .des_top_skyimg {
+            background-image: url('https://www.microsoft.com/design/fluent/assets/images/icon-fluent-solid.svg');
+            width: 300px;
+            height: 60%;
+            background-size: cover;
+            position: absolute;
+            left: 250px;
+            bottom: -3500px;
+        }
+
+        .bottombar_menu {
+            background-color: #000;
+            width: 100%;
+            height: 300px;
+            margin: 0;
+        }
+
+        #bottom_menu_first {
+            background-color: #000;
+            color: #fff;
+            height: 100%;
+        }
+
+        #bottom_menu_first:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        #bottom_menu_second {
+            background-color: rgb(57, 57, 57);
+            height: 100%;
+            color: #fff;
+        }
+
+        #bottom_menu_second:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        #bottom_menu_third {
+            background-color: rgb(118, 118, 118);
+            height: 100%;
+        }
+
+        #bottom_menu_third:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        #bottom_menu_right {
+            background-color: rgb(204, 204, 204);
+            height: 100%;
+        }
+
+        #bottom_menu_right:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .bottom_menugroup p {
+            position: relative;
+            top: 20px;
+            left: 15px;
+            right: 15px;
+            font-size: 1.2em;
+        }
+
+        .bottom_icon {
+            display: flex;
+            position: relative;
+            top: 100px;
+            left: 15px;
+        }
+
+        .bottom_icon img {
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="all">
+        <div class="navbar">
+            <div class="logoicon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Kisspng-windows-xp-logo-microsoft-windows-1-0-windows-logos-5ab719f5df9366.6936122615219491739158.jpg"
+                    alt="" style="height: 48px">
+                <p>Fluent Design System</p>
+            </div>
+            <div class="navrightmenu">
+                <p>Web</p>
+                <p>Windows</p>
+                <p>iOS</p>
+                <p>Android</p>
+            </div>
+        </div>
+
+        <div class="container_all">
+            <div class="main_all">
+                <div class="left_main_title">
+                    <h1>Fluent Design System</h1>
+                    <p>Fluent brings the fundamentals of principled design, innovation in technology, and customer needs
+                        together as one. It’s a collective approach to creating simplicity and coherence through
+                        ashared, open design system across platforms.</p>
+                    <p>Open ecosystem, open design system.</p>
+                </div>
+                <div class="right_main_img">
+                    <img src="https://www.microsoft.com/design/fluent/assets/images/line-white-02.svg" alt=""
+                        id="right_img_left">
+                    <img src="https://www.microsoft.com/design/fluent/assets/images/icon-fluent@1x.png" alt=""
+                        id="right_img_middle">
+                    <img src="https://www.microsoft.com/design/fluent/assets/images/line-white-01.svg" alt=""
+                        id="right_img_right">
+                </div>
+            </div>
+            <div class="form_menuboxs">
+                <div class="d-flex row justify-content-center">
+                    <div class="col col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="form_group" id="left_form">
+                            <div class="form_topicon">
+                                <img src="https://www.microsoft.com/design/fluent/assets/images/icon-globe.svg" alt="">
+                            </div>
+                            <div class="form_title">
+                                <h2>Web</h2>
+                                <p>Create your own web apps and add-ins.</p>
+                                <div class="bottom_icon">
+                                    <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg"
+                                        alt="">
+                                    <span>Get started</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="form_group" id="second_form">
+                            <div class="form_topicon">
+                                <img src="https://www.microsoft.com/design/fluent/assets/images/icon-windows.svg"
+                                    alt="">
+                            </div>
+                            <div class="form_title">
+                                <h2>Windwos</h2>
+                                <p>Create and publish your own Windows apps.</p>
+                                <div class="bottom_icon">
+                                    <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg"
+                                        alt="">
+                                    <span>Get started</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="form_group" id="third_form">
+                            <div class="form_topicon">
+                                <img src="https://www.microsoft.com/design/fluent/assets/images/icon-ios.svg" alt="">
+                            </div>
+                            <div class="form_title">
+                                <h2>iOS</h2>
+                                <p>Take your custom apps to the mobile market.</p>
+                                <div class="bottom_icon">
+                                    <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg"
+                                        alt="">
+                                    <span>Get started</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="form_group" id="right_form">
+                            <div class="form_topicon">
+                                <img src="https://www.microsoft.com/design/fluent/assets/images/icon-android.svg"
+                                    alt="">
+                            </div>
+                            <div class="form_title">
+                                <h2>Android</h2>
+                                <p>Take your custom apps to the mobile market.</p>
+                                <div class="bottom_icon">
+                                    <img src="https://www.microsoft.com/design/fluent/assets/images/arrow-black.svg"
+                                        alt="">
+                                    <span>Get started</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="des_background_img">
+            <div class="des_title">
+                <h1>Natural on every device</h1>
+                <p>People move and shift across devices and platforms throughout their day. From laptops to phones,
+                    from PCs to holograms. From office to living room, from real to virtual. Experiences seamlessly
+                    move and shift with them.</p>
+            </div>
+        </div>
+
+        <div class="style_background">
+            <div data-aos="zoom-in">
+                <div class="style_middle_ball"></div>
+            </div>
+            <div class="style_right_box"></div>
+            <div class="style_right_text">
+                <p>When design is intuitive, people are inspired to move forward. They’re understood and their
+                    behavior is anticipated. Experiences adapt to their needs, intent, and context.</p>
+            </div>
+
+            <div data-aos="fade-up">
+                <div class="style_bottom_ball">
+                    <h2>Intuitive and powerful</h2>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="des_background_pink">
+            <div class="des_rightpink_img"></div>
+            <div class="des_pink_left_title">De-</div>
+            <div class="des_pink_right_title">sign</div>
+        </div>
+
+        <div class="des_background_gray">
+            <h2>Engaging and immersive</h2>
+            <p>Experiences feel connected to the physical world-in the weave and fold of fundamental materials.
+                Spaces feel clean, light and open. They draw people in, bring them together, and help them focus on
+                what they’re trying to achieve.</p>
+            <div class="des_gray_rightimg"></div>
+        </div>
+
+        <div class="des_background_sky">
+            <div class="des_top_skyimg"></div>
+        </div>
+        <div class="d-flex bottombar_menu">
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                    <div id="bottom_menu_first" class="bottom_menugroup">
+                        <p>How Microsoft learned from the past to redesign its future</p>
+                        <div class="bottom_icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Win-like-userbox.svg" alt=""
+                                height="20">
+                            <p>Microsoft Design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                    <div id="bottom_menu_second" class="bottom_menugroup">
+                        <p>How Microsoft learned from the past to redesign its future</p>
+                        <div class="bottom_icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Win-like-userbox.svg" alt=""
+                                height="20">
+                            <p>Microsoft Design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                    <div id="bottom_menu_third" class="bottom_menugroup">
+                        <p>Microsoft learned from the past to redesign its future</p>
+                        <div class="bottom_icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Win-like-userbox.svg" alt=""
+                                height="20">
+                            <p>Microsoft Design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                    <div id="bottom_menu_right" class="bottom_menugroup">
+                        <p>How Microsoft learned from the past to redesign its future</p>
+                        <div class="bottom_icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Win-like-userbox.svg" alt=""
+                                height="20">
+                            <p>Microsoft Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+
+
+</body>
+
+</html>
